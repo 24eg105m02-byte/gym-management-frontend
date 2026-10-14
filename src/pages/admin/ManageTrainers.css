@@ -1,0 +1,61 @@
+.trainer-avatar {
+  width: 34px;
+  height: 34px;
+  background: #21150f;
+  color: #ff4d00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.trainer-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.trainer-actions button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #292929;
+  background: #101010;
+  color: #777;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trainer-actions button:hover {
+  color: #ff4d00;
+  border-color: #ff4d00;
+}
+
+.trainer-actions .delete-action:hover {
+  color: #ff5555;
+  border-color: #553030;
+}
+
+.trainer-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.trainer-details-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.trainer-details-grid span {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.trainer-details-grid strong {
+  color: #fff;
+  font-size: 0.95rem;
+}
