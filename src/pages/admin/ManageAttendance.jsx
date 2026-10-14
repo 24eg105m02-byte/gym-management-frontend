@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+ HEAD
 import { useEffect, useState, useCallback } from "react";
-=======
-import { useEffect, useState } from "react";
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
+
 import {
   Plus,
   Edit,
@@ -51,11 +49,7 @@ function ManageAttendance() {
     checkOutTime: "09:30",
   });
 
-<<<<<<< HEAD
   const loadData = useCallback(async (dateVal = filterDate, memberVal = filterMemberId) => {
-=======
-  const loadData = async (dateVal = filterDate, memberVal = filterMemberId) => {
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
     setLoading(true);
     setError("");
     try {
@@ -76,19 +70,11 @@ function ManageAttendance() {
     } finally {
       setLoading(false);
     }
-<<<<<<< HEAD
   }, [filterDate, filterMemberId]);
 
   useEffect(() => {
     loadData("", "");
   }, [loadData]);
-=======
-  };
-
-  useEffect(() => {
-    loadData("", "");
-  }, []);
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 
   const handleFilterChange = (newDate, newMember) => {
     setFilterDate(newDate);
@@ -127,11 +113,7 @@ function ManageAttendance() {
     setFormError("");
     setSaving(true);
     const payload = {
-<<<<<<< HEAD
-      memberId: formData.memberId,
-=======
       memberId: Number(formData.memberId),
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
       date: formData.date || null,
       status: formData.status,
       checkInTime: formData.checkInTime || null,

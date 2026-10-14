@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useState, useCallback } from "react";
-=======
-import { useEffect, useState } from "react";
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 import { Plus, Edit } from "lucide-react";
 import TrainerLayout from "../../layouts/TrainerLayout";
 import Loading from "../../components/Loading";
@@ -35,11 +31,7 @@ function TrainerAttendance() {
     checkOutTime: "09:00",
   });
 
-<<<<<<< HEAD
   const loadData = useCallback(async (dateVal = filterDate) => {
-=======
-  const loadData = async (dateVal = filterDate) => {
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
     setLoading(true);
     setError("");
     try {
@@ -55,19 +47,11 @@ function TrainerAttendance() {
     } finally {
       setLoading(false);
     }
-<<<<<<< HEAD
   }, [filterDate]);
 
   useEffect(() => {
     loadData("");
   }, [loadData]);
-=======
-  };
-
-  useEffect(() => {
-    loadData("");
-  }, []);
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 
   const openMarkModal = () => {
     setEditing(null);
@@ -100,11 +84,7 @@ function TrainerAttendance() {
     setFormError("");
     setSaving(true);
     const payload = {
-<<<<<<< HEAD
-      memberId: formData.memberId,
-=======
       memberId: Number(formData.memberId),
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
       date: formData.date || null,
       status: formData.status,
       checkInTime: formData.checkInTime || null,

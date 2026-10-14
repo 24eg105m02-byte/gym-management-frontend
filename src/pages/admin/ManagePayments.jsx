@@ -117,15 +117,10 @@ function ManagePayments() {
     setSaving(true);
     try {
       await createPayment({
-<<<<<<< HEAD
-        memberId: formData.memberId,
-        membershipId: formData.membershipId || null,
-=======
         memberId: Number(formData.memberId),
         membershipId: formData.membershipId
           ? Number(formData.membershipId)
           : null,
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
         amount: Number(formData.amount),
         paymentMethod: formData.paymentMethod,
         transactionReference: formData.transactionReference.trim() || null,

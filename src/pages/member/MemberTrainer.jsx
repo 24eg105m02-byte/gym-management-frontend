@@ -45,11 +45,7 @@ function MemberTrainer() {
     setMessage("");
     setError("");
     try {
-<<<<<<< HEAD
-      await updateMyProfile({ trainerId });
-=======
       await updateMyProfile({ trainerId: Number(trainerId) });
->>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
       setMessage("Trainer assigned successfully!");
       await loadData();
     } catch (err) {
