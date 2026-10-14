@@ -1,0 +1,134 @@
+.dash-shell {
+  min-height: 100vh;
+  background: #0b0b0b;
+  color: #fff;
+  display: flex;
+}
+
+.dash-sidebar {
+  width: 260px;
+  background: #111;
+  border-right: 1px solid #292929;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 40;
+  transition: transform 0.25s ease;
+}
+
+.dash-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px 20px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ff4d00;
+}
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.dash-nav a,
+.dash-nav button.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #cfcfcf;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.dash-nav a:hover,
+.dash-nav button.nav-link:hover {
+  background: #191919;
+  color: #fff;
+}
+
+.dash-nav a.active {
+  background: rgba(255, 77, 0, 0.12);
+  color: #ff4d00;
+}
+
+.dash-main {
+  flex: 1;
+  margin-left: 260px;
+  min-width: 0;
+}
+
+.dash-topbar {
+  height: 64px;
+  border-bottom: 1px solid #292929;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.dash-content {
+  padding: 24px;
+}
+
+.dash-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cfcfcf;
+}
+
+.dash-overlay {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 1px solid #292929;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .dash-sidebar {
+    transform: translateX(-105%);
+  }
+
+  .dash-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .dash-main {
+    margin-left: 0;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+  }
+
+  .dash-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 30;
+  }
+}
