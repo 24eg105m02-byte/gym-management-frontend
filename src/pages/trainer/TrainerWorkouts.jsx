@@ -129,7 +129,11 @@ function TrainerWorkouts() {
     setSaving(true);
 
     const payload = {
+<<<<<<< HEAD
       memberId: formData.memberId,
+=======
+      memberId: Number(formData.memberId),
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
       title: formData.title.trim(),
       goal: formData.goal.trim(),
       description: formData.description.trim(),

@@ -143,8 +143,13 @@ function ManageMembers() {
       dateOfBirth: formData.dateOfBirth || null,
       address: formData.address || null,
       emergencyContact: formData.emergencyContact || null,
+<<<<<<< HEAD
       membershipId: formData.membershipId || null,
       trainerId: formData.trainerId || null,
+=======
+      membershipId: formData.membershipId ? Number(formData.membershipId) : null,
+      trainerId: formData.trainerId ? Number(formData.trainerId) : null,
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
       membershipStartDate: formData.membershipStartDate || null,
       membershipEndDate: formData.membershipEndDate || null,
       status: formData.status,
@@ -621,4 +626,8 @@ function ManageMembers() {
   );
 }
 
+<<<<<<< HEAD
 export default ManageMembers;
+=======
+export default ManageMembers;
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useEffect, useState, useCallback } from "react";
+=======
+import { useEffect, useState } from "react";
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 import { BarChart3, IndianRupee, Star } from "lucide-react";
 import AdminLayout from "../../layouts/AdminLayout";
 import Loading from "../../components/Loading";
@@ -20,7 +24,11 @@ function AdminReports() {
     () => new Date().toISOString().split("T")[0]
   );
 
+<<<<<<< HEAD
   const loadReports = useCallback(async (start = startDate, end = endDate) => {
+=======
+  const loadReports = async (start = startDate, end = endDate) => {
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
     setLoading(true);
     setError("");
     try {
@@ -35,11 +43,19 @@ function AdminReports() {
     } finally {
       setLoading(false);
     }
+<<<<<<< HEAD
   }, [startDate, endDate]);
 
   useEffect(() => {
     loadReports();
   }, [loadReports]);
+=======
+  };
+
+  useEffect(() => {
+    loadReports();
+  }, []);
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 
   const maxGrowth = Math.max(
     1,

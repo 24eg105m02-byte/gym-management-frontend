@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useEffect, useState, useCallback } from "react";
+=======
+import { useEffect, useState } from "react";
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 import { Plus, Edit } from "lucide-react";
 import TrainerLayout from "../../layouts/TrainerLayout";
 import Loading from "../../components/Loading";
@@ -33,7 +37,11 @@ function TrainerProgress() {
     recordDate: todayStr(),
   });
 
+<<<<<<< HEAD
   const loadData = useCallback(async (memberId = selectedMemberId) => {
+=======
+  const loadData = async (memberId = selectedMemberId) => {
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
     setLoading(true);
     setError("");
     try {
@@ -49,11 +57,19 @@ function TrainerProgress() {
     } finally {
       setLoading(false);
     }
+<<<<<<< HEAD
   }, [selectedMemberId]);
 
   useEffect(() => {
     loadData("");
   }, [loadData]);
+=======
+  };
+
+  useEffect(() => {
+    loadData("");
+  }, []);
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
 
   const openAdd = () => {
     setEditing(null);
@@ -90,7 +106,11 @@ function TrainerProgress() {
     setFormError("");
     setSaving(true);
     const payload = {
+<<<<<<< HEAD
       memberId: formData.memberId,
+=======
+      memberId: Number(formData.memberId),
+>>>>>>> ed4e94e646ea6516796b51466645c4c2bb71395c
       weight: formData.weight !== "" ? Number(formData.weight) : null,
       height: formData.height !== "" ? Number(formData.height) : null,
       bodyFat: formData.bodyFat !== "" ? Number(formData.bodyFat) : null,
